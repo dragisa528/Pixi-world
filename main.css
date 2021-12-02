@@ -1,0 +1,208 @@
+@font-face {
+	font-family: 'Pixelated';
+	src: url('pixelated.ttf') format('truetype');
+}
+* { margin:0; padding:0; } /* to remove the top and left whitespace */
+html, body { width:100%; height:100%; } /* just to be sure these are full screen*/
+canvas { display: block; }
+canvas {
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
+	-webkit-tap-highlight-color: transparent;
+}
+*{
+	font-family: 'Pixelated', sans-serif !important;
+}
+body{
+	position: absolute;
+}
+
+.second, .forms {
+	position: absolute;
+	z-index: 100;
+}
+.forms .autoForm, .second .autoForm {
+	background: grey;
+	position: absolute;
+}
+
+.basic-text {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.forms-default {
+	font-family: Pixelated, sans-serif !important;
+	font-size: 32px;
+	background-color: white;
+	border: 2px gray solid;
+	padding-bottom:2rem;
+}
+.button-default {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+}
+.select-default {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+}
+.option-default {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+}
+.radio-default {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+}
+.input-default {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+	max-width: 265px;
+}
+.range-default {
+	padding: 8px;
+	font-size: 32px;
+	font-weight: bold;
+}
+#turnStatus{
+	display: none !important;
+}
+
+.forms-default{
+	margin: auto;
+	position: relative;
+	width: 60%;
+	margin-top: 10%;
+	max-width: 18rem;
+	border-width: 48px;
+	border-image: url("footbk.jpg") 50% round;
+	background-image:url("knot.jpg");
+	background-repeat: no-repeat;
+	padding-bottom:3rem;
+	background-position: center bottom;
+	z-index: 900;
+	max-height: 80vh;
+	overflow: auto;
+}
+
+.forms-default p:first-child{
+	margin-top: 2rem;
+}
+@media(max-height: 800px){
+	.forms-default{
+		background-image:none;
+		margin-top: 5%;
+	}
+}
+@media(max-height: 400px ){
+	.forms-default{
+		margin-top: 0%;
+	}
+}
+body{
+	overflow: hidden;
+}
+
+.forms-default .button-default{
+	width:100%;
+	background: none;
+	border:none;
+	outline: none;
+}
+.forms h2{
+	text-align: center;
+	border-bottom:6px #c91a1a solid;
+	padding-bottom:1.25rem;
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+}
+.button-default{
+	padding-top:1.5rem;
+}
+#knot{
+	margin:auto;
+	width:32px;
+	display: block;
+	position: relative;
+	top:3.5rem;
+}
+p{
+	font-size: 1.25rem;
+	text-align: center;
+	position: relative;
+	top:-1rem;
+}
+#numberOfPlayers{
+	display: block;
+	margin:auto;
+}
+
+#playermenu{
+	position: absolute;
+	bottom:0px;
+	width:100%;
+	display: none;
+	background:rgba(0,0,0,.5);
+	z-index: 1;
+	color:white;
+	padding:2rem;
+}
+
+.playerActions button{
+	font-size: 16px;
+	/* width: 100%; */
+	line-height: 32px;
+	padding: .0rem;
+	width: 6rem;
+	display: block;
+	color: white;
+	border: 0;
+	background: rgba(0,0,0,.8);
+	/* border-radius: 190px; */
+	border-bottom: 1px solid rgba(255,255,255,.25);
+
+}
+
+progress{
+	/* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+   background: red;
+   height: .5rem;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(top,
+	                           rgba(255, 255, 255, .25),
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, red, red);
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+#numberOfPlayers{
+	min-width: 6rem;
+  text-align: center;
+}
+
+#backtomain{
+	padding:1.5rem;
+	z-index: 9000;
+	position: absolute;
+	display: none;
+}
